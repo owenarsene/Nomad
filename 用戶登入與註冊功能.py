@@ -3,7 +3,7 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-@app.route('/register', methods=['GET', 'POST'])
+@fapp.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         username = request.form['username']
@@ -45,3 +45,5 @@ def logout():
     logout_user()
     flash('已成功登出!', 'success')
     return redirect(url_for('login'))
+
+//app log connec wix.com 
