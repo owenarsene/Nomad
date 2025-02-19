@@ -44,4 +44,5 @@ class User(UserMixin, db.Model):
 
 # 初始化數據庫
 db.create_all()
+#註冊葉面
 
