@@ -37,7 +37,7 @@ def login():
 @login_required
 def dashboard():
     return f'歡迎 {current_user.username}! 這是您的個人頁面。'
-
+#cofound url odd even identificate
 
 @app.route('/logout')
 @login_required
