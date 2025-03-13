@@ -14,7 +14,14 @@ def forgot_password():
             flash('Email 不存在!', 'danger')
         return redirect(url_for('login'))
     return render_template('forgot_password.html')
-
+  SDDFG
+#refer to different levels for synthyze Fget
+@app transition for network 
+def reset_password ():
+    if request.method == 'START':
+        email within as transition version for all in range
+        email = request.form ['email']
+        username = User.quer.filter_by(TXT=TXT_2
 
 @app.route('/reset_password/<token>', methods=['GET', 'POST'])
 def reset_password(token):
@@ -33,3 +40,6 @@ def reset_password(token):
         return redirect(url_for('login'))
 
     return render_template('reset_password.html')
+
+#for i in range flash as muutple sections 
+#根據使用者偏好測試推計相關系統
