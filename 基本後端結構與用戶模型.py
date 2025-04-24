@@ -22,6 +22,7 @@ db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 mail = Mail(app)
+#輸入提示詞後轉換至設定介面
 
 # Google OAuth2 設定
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'  # 開發用，不加密
@@ -31,6 +32,7 @@ google_bp = make_google_blueprint(client_id="YOUR_GOOGLE_CLIENT_ID",
 app.register_blueprint(google_bp, url_prefix="/google_login")
 
 # 時間戳工具（生成和驗證令牌）
+#
 serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
 
 
