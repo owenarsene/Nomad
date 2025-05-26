@@ -9,7 +9,7 @@ from flask_dance.contrib.google import make_google_blueprint, google
 import os
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired
 
-app = Flask(__name__)
+app = Flask(__name__) 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SECRET_KEY'] = 'your_secret_key'
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -31,8 +31,8 @@ google_bp = make_google_blueprint(client_id="YOUR_GOOGLE_CLIENT_ID",
                                   redirect_to="google_login")
 app.register_blueprint(google_bp, url_prefix="/google_login")
 
-# 時間戳工具（生成和驗證令牌）
-#
+# 時間戳工具（生成和驗證令牌） 
+# 串接wix API設定
 serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
 
 
@@ -49,4 +49,3 @@ db.create_all()
 #註冊葉面
 
 //coordinate program technic
-
