@@ -1,5 +1,6 @@
 // pip install flask flask-login flask-sqlalchemy flask-mail flask-dance
-
+// figma installation for Flask import redirect request_url, flash and session 
+// itsdangerouse import SQLAlchemy 
 
 from flask import Flask, render_template, redirect, request, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
@@ -46,6 +47,6 @@ class User(UserMixin, db.Model):
 
 # 初始化數據庫
 db.create_all()
-#註冊葉面
+
 
 //coordinate program technic
